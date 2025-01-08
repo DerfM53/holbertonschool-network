@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 #Command list all connexion
-ss -tulnp
+ss -tuln
+ss -x -l
