@@ -1,0 +1,28 @@
+Introduction
+When you type a URL into your browser and press Enter, a complex series of events occurs behind the scenes to display the requested web page. Understanding this process is essential for software engineers, as it involves multiple layers of the technology stack, from DNS resolution to retrieving data from a database.
+
+1. DNS Resolution
+DNS Request: When you type https://www.google.com, the browser starts by sending a DNS request to translate the domain name into an IP address.
+Local DNS Server: The request is first sent to a local DNS server (often provided by your ISP).
+Authoritative DNS Server: If the local DNS server does not know the IP address, it queries an authoritative DNS server to obtain the IP address of www.google.com.
+2. TCP/IP Connection Establishment
+TCP Connection: Once the IP address is obtained, the browser establishes a TCP connection with Google's web server.
+Port: The connection is established on port 443, as it is an HTTPS connection.
+3. Firewall Traversal
+Firewall: The traffic passes through a firewall that checks and allows or blocks the traffic based on defined security rules.
+4. HTTPS/SSL Communication
+SSL/TLS Handshake: Once the TCP connection is established, an SSL/TLS handshake occurs to establish a secure connection. This involves exchanging keys to encrypt the data exchanged.
+Encryption: All data exchanged between the browser and the server is encrypted to ensure data confidentiality and integrity.
+5. Load Balancer
+Load Distribution: The request is directed to a load balancer that distributes the traffic to multiple servers to ensure availability and performance.
+6. Web Server
+Request Reception: The web server receives the request and processes it.
+Response: The web server generates an HTTP response and sends it back to the browser.
+7. Application Server
+Page Generation: The application server generates the dynamic content of the web page by executing the application code.
+Database Interaction: The application server may interact with a database to retrieve or store data necessary for generating the page.
+8. Database
+Data Request: The application server sends queries to the database to retrieve the necessary data.
+Database Response: The database returns the requested data to the application server.
+Conclusion
+The process of loading a web page involves several complex steps, from DNS resolution to retrieving data from a database. Understanding this process is crucial for software engineers, as it allows them to diagnose and resolve performance and security issues.
